@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Money Handler</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings">Settings</string>
+    <string name="_1_1">1.1 V</string>
+    <string name="configuration">Configuration</string>
+    <string name="accounts">Accounts</string>
+    <string name="pass_code">Passcode</string>
+    <string name="configuration_text">Configuration</string>
+    <string name="title_plus">Plus</string>
+</resources>
