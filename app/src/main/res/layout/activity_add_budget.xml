@@ -43,6 +43,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/linear_calculator"
             android:layout_marginBottom="20dp"
             android:orientation="horizontal">
             <TextView
@@ -92,6 +93,21 @@
     </LinearLayout>
     <GridView
         android:layout_width="match_parent"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+
+        android:id="@+id/grid_data"
         android:layout_height="wrap_content"
         ></GridView>
+    <GridView
+        android:layout_width="match_parent"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:id="@+id/calculator_grid"
+        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content"></GridView>
 </LinearLayout>
