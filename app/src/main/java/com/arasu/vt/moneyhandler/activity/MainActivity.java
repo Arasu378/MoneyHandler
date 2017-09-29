@@ -9,6 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.arasu.vt.moneyhandler.R;
+import com.arasu.vt.moneyhandler.fragment.AccountsFragment;
 import com.arasu.vt.moneyhandler.fragment.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +23,12 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     return true;
-                case R.id.navigation_dashboard:
+                case R.id.navigation_accounts:
+                    AccountsFragment fragment_Accounts=new AccountsFragment();
+                    android.support.v4.app.FragmentTransaction fragmentTransaction_acc=
+                            getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction_acc.replace(R.id.content,fragment_Accounts);
+                    fragmentTransaction_acc.commit();
                     return true;
                 case R.id.navigation_settings:
                     SettingsFragment fragment=new SettingsFragment();

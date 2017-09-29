@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.arasu.vt.moneyhandler.R;
 import com.arasu.vt.moneyhandler.dbconnections.Income;
+import com.arasu.vt.moneyhandler.models.Events;
+import com.arasu.vt.moneyhandler.models.GlobalBus;
 import com.squareup.otto.Bus;
 import com.squareup.otto.Produce;
 import com.squareup.otto.Subscribe;
@@ -54,13 +56,17 @@ public class AddBudgetAdapter extends BaseAdapter {
         RelativeLayout relative_click=(RelativeLayout)view.findViewById(R.id.relative_click);
         TextView text_cast_name=(TextView)view.findViewById(R.id.text_cast_name);
         Income value=incomeList.get(position);
-        String text_Name=value.getTitle();
+        final String text_Name=value.getTitle();
         if(text_Name!=null){
             text_cast_name.setText(text_Name);
         }
         relative_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Events.AdapterFragmentMessage adapterFragmentMessageEvent =
+                        new Events.AdapterFragmentMessage(text_Name);
+                GlobalBus.getBus().post(adapterFragmentMessageEvent);
+
                 Toast.makeText(mContext,"Clicked : "+position,Toast.LENGTH_SHORT).show();
             }
         });

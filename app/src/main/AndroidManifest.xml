@@ -42,9 +42,17 @@
             android:name=".activity.Budget"
             android:label="Budget"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.AddBudgetActivity"
+        <activity
+            android:name=".activity.AddBudgetActivity"
             android:label="Add Budget"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.SelectTheAccountGroup"
+            android:label="Select the Account Group"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.AddAccount"
+            android:theme="@style/AppTheme"
+            android:label="Add Account"></activity>
     </application>
 
 </manifest>
