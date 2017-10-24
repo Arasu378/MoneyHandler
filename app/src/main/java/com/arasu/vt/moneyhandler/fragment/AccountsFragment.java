@@ -13,6 +13,7 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.arasu.vt.moneyhandler.R;
+import com.arasu.vt.moneyhandler.activity.AccountGroupActivity;
 import com.arasu.vt.moneyhandler.activity.AddAccount;
 import com.arasu.vt.moneyhandler.activity.SelectTheAccountGroup;
 
@@ -40,8 +41,9 @@ public class AccountsFragment extends Fragment {
                         Toast.makeText(getContext(),"value : "+value.toString(),Toast.LENGTH_SHORT).show();
                         switch (value.toString()){
                             case "Add":
-                                Intent intent=new Intent(getContext(),AddAccount.class);
+                                Intent intent=new Intent(getContext(),AccountGroupActivity.class);
                                 startActivity(intent);
+
                                 break;
                             case "Edit":
                                 break;
