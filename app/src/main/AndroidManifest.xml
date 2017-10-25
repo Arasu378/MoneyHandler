@@ -54,7 +54,9 @@
             android:name=".activity.AddAccount"
             android:label="Add Account"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.AccountGroupActivity"></activity>
+        <activity android:name=".activity.AccountGroupActivity" />
+        <activity android:name=".activity.BackupActivity"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

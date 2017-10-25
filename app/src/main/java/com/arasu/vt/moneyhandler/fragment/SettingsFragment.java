@@ -1,5 +1,6 @@
 package com.arasu.vt.moneyhandler.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.arasu.vt.moneyhandler.R;
+import com.arasu.vt.moneyhandler.activity.BackupActivity;
 import com.arasu.vt.moneyhandler.adapters.SettingsAdapter;
 import com.arasu.vt.moneyhandler.models.Events;
 import com.arasu.vt.moneyhandler.models.GlobalBus;
@@ -80,6 +82,8 @@ public class SettingsFragment extends Fragment {
            case "3":
                break;
            case "4":
+               Intent intent=new Intent(getContext(), BackupActivity.class);
+               startActivity(intent);
                break;
            case "5":
                break;
